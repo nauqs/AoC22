@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     # Get today's date and make request
     today = date.today().day
-    url = f'https://adventofcode.com/2021/day/{today}/input'
+    url = f'https://adventofcode.com/2022/day/{today}/input'
     request = requests.get(url, cookies={'session': cookie})
 
     # Save to file
