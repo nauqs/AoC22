@@ -5,8 +5,7 @@ def part1(data):
     return (np.concatenate([np.array([x,0]) if x!=0 else np.array([x]) for x in data]).cumsum()[np.arange(20,221,40)-1]*[np.arange(20,221,40)]).sum()
 
 def part2(data):
-    X = np.concatenate([np.array([x,0]) if x!=0 else np.array([x]) for x in data]).cumsum()
-    return ["".join(x.astype(str)) for x in np.array(["#" if p else "." for p in ((np.abs(X[:-2]-np.arange(240)%40))<=1)]).reshape(6,40)]
+    return ["".join(x.astype(str)) for x in np.array(["#" if p else "." for p in ((np.abs(np.concatenate([np.array([x,0]) if x!=0 else np.array([x]) for x in data]).cumsum()[:-2]-np.arange(240)%40))<=1)]).reshape(6,40)]
 
 if __name__ == "__main__":
     day = 10
