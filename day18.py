@@ -45,22 +45,7 @@ def interior_cubes(cubes):
 
 if __name__ == "__main__":
     day = 18
-    example_data = """2,2,2
-1,2,2
-3,2,2
-2,1,2
-2,3,2
-2,2,1
-2,2,3
-2,2,4
-2,2,6
-1,2,5
-3,2,5
-2,1,5
-2,3,5""".splitlines()
     data = get_input(day)
-    #data = example_data
     data = [l.split(',') for l in data]
     print(part1(np.array(data).astype(int)))
     print(part2(data))
-
