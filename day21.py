@@ -50,4 +50,3 @@ if __name__ == "__main__":
     data = [re.split(": | ", l) for l in data]
     print(part1(data))
     print(part2(data))
-
